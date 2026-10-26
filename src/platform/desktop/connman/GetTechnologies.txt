@@ -1,0 +1,52 @@
+   array [
+      struct {
+         object path "/net/connman/technology/lowpan"
+         array [
+            dict entry(
+               string "Name"
+               variant                   string "Thread"
+            )
+            dict entry(
+               string "Type"
+               variant                   string "lowpan"
+            )
+            dict entry(
+               string "Powered"
+               variant                   boolean true
+            )
+            dict entry(
+               string "Connected"
+               variant                   boolean true
+            )
+            dict entry(
+               string "Tethering"
+               variant                   boolean false
+            )
+         ]
+      }
+      struct {
+         object path "/net/connman/technology/wifi"
+         array [
+            dict entry(
+               string "Name"
+               variant                   string "WiFi"
+            )
+            dict entry(
+               string "Type"
+               variant                   string "wifi"
+            )
+            dict entry(
+               string "Powered"
+               variant                   boolean true
+            )
+            dict entry(
+               string "Connected"
+               variant                   boolean true
+            )
+            dict entry(
+               string "Tethering"
+               variant                   boolean false
+            )
+         ]
+      }
+   ]
