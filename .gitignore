@@ -1,0 +1,20 @@
+# Build output: cargo's, when built on its own, and build.sh's staging and
+# work folders, when run from here.
+/target/
+/build/
+/.work/
+
+# Python tools' caches.
+__pycache__/
+*.pyc
+.venv/
+
+# Editors and macOS.
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# Agents' git worktrees.
+/.claude/worktrees/

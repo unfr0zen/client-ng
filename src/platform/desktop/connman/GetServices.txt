@@ -1,0 +1,765 @@
+   array [
+      struct {
+         object path "/net/connman/service/wifi_18b4307d829a_51454d55_managed_none"
+         array [
+            dict entry(
+               string "Type"
+               variant                   string "wifi"
+            )
+            dict entry(
+               string "Security"
+               variant                   array [
+                     string "none"
+                  ]
+            )
+            dict entry(
+               string "State"
+               variant                   string "ready"
+            )
+            dict entry(
+               string "Strength"
+               variant                   byte 80
+            )
+            dict entry(
+               string "Favorite"
+               variant                   boolean true
+            )
+            dict entry(
+               string "Immutable"
+               variant                   boolean false
+            )
+            dict entry(
+               string "AutoConnect"
+               variant                   boolean true
+            )
+            dict entry(
+               string "Name"
+               variant                   string "QEMU"
+            )
+            dict entry(
+               string "Ethernet"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "auto"
+                     )
+                     dict entry(
+                        string "Interface"
+                        variant                            string "wlan0"
+                     )
+                     dict entry(
+                        string "Address"
+                        variant                            string "18:B4:30:7D:82:9A"
+                     )
+                     dict entry(
+                        string "MTU"
+                        variant                            uint16 1500
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv4"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "manual"
+                     )
+                     dict entry(
+                        string "Address"
+                        variant                            string "10.0.2.15"
+                     )
+                     dict entry(
+                        string "Netmask"
+                        variant                            string "255.255.255.0"
+                     )
+                     dict entry(
+                        string "Gateway"
+                        variant                            string "10.0.2.2"
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv4.Configuration"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "manual"
+                     )
+                     dict entry(
+                        string "Address"
+                        variant                            string "10.0.2.15"
+                     )
+                     dict entry(
+                        string "Netmask"
+                        variant                            string "255.255.255.0"
+                     )
+                     dict entry(
+                        string "Gateway"
+                        variant                            string "10.0.2.2"
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv6"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "auto"
+                     )
+                     dict entry(
+                        string "Address"
+                        variant                            string "fec0::1ab4:30ff:fe7d:829a"
+                     )
+                     dict entry(
+                        string "PrefixLength"
+                        variant                            byte 64
+                     )
+                     dict entry(
+                        string "Privacy"
+                        variant                            string "prefered"
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv6.Configuration"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "auto"
+                     )
+                     dict entry(
+                        string "Privacy"
+                        variant                            string "prefered"
+                     )
+                  ]
+            )
+            dict entry(
+               string "Nameservers"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Nameservers.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Timeservers"
+               variant                   array [
+                     string "time.nest.com"
+                  ]
+            )
+            dict entry(
+               string "Timeservers.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Domains"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Domains.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Proxy"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "direct"
+                     )
+                  ]
+            )
+            dict entry(
+               string "Proxy.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Provider"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Age"
+               variant                   boolean false
+            )
+         ]
+      }
+      struct {
+         object path "/net/connman/service/lowpan_wpan0_4E4553542D50414E2D38383343_x24E7EA091210957D"
+         array [
+            dict entry(
+               string "Type"
+               variant                   string "lowpan"
+            )
+            dict entry(
+               string "Security"
+               variant                   array [
+                     string "psk"
+                  ]
+            )
+            dict entry(
+               string "Passphrase"
+               variant                   string "C6C93A5464FEA28E7974C224A3652028"
+            )
+            dict entry(
+               string "State"
+               variant                   string "ready"
+            )
+            dict entry(
+               string "Strength"
+               variant                   byte 100
+            )
+            dict entry(
+               string "Favorite"
+               variant                   boolean true
+            )
+            dict entry(
+               string "Immutable"
+               variant                   boolean false
+            )
+            dict entry(
+               string "AutoConnect"
+               variant                   boolean false
+            )
+            dict entry(
+               string "Name"
+               variant                   string "NEST-PAN-883C"
+            )
+            dict entry(
+               string "Ethernet"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "auto"
+                     )
+                     dict entry(
+                        string "Interface"
+                        variant                            string "wpan0"
+                     )
+                     dict entry(
+                        string "Address"
+                        variant                            string "18:B4:30:00:00:00:00:01"
+                     )
+                     dict entry(
+                        string "MTU"
+                        variant                            uint16 1280
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv4"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "IPv4.Configuration"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "off"
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv6"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "fixed"
+                     )
+                     dict entry(
+                        string "Privacy"
+                        variant                            string "disabled"
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv6.Configuration"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "fixed"
+                     )
+                     dict entry(
+                        string "Privacy"
+                        variant                            string "disabled"
+                     )
+                  ]
+            )
+            dict entry(
+               string "Nameservers"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Nameservers.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Timeservers"
+               variant                   array [
+                     string "time.nest.com"
+                  ]
+            )
+            dict entry(
+               string "Timeservers.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Domains"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Domains.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Proxy"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Proxy.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Provider"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Age"
+               variant                   boolean false
+            )
+         ]
+      }
+      struct {
+         object path "/net/connman/service/wifi_18b4307d829a_4e6573742d57504132_managed_psk"
+         array [
+            dict entry(
+               string "Type"
+               variant                   string "wifi"
+            )
+            dict entry(
+               string "Security"
+               variant                   array [
+                     string "psk"
+                  ]
+            )
+            dict entry(
+               string "State"
+               variant                   string "idle"
+            )
+            dict entry(
+               string "Strength"
+               variant                   byte 65
+            )
+            dict entry(
+               string "Favorite"
+               variant                   boolean false
+            )
+            dict entry(
+               string "Immutable"
+               variant                   boolean false
+            )
+            dict entry(
+               string "AutoConnect"
+               variant                   boolean false
+            )
+            dict entry(
+               string "Name"
+               variant                   string "Nest-WPA2"
+            )
+            dict entry(
+               string "Ethernet"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "auto"
+                     )
+                     dict entry(
+                        string "Interface"
+                        variant                            string "wlan0"
+                     )
+                     dict entry(
+                        string "Address"
+                        variant                            string "18:B4:30:7D:82:9A"
+                     )
+                     dict entry(
+                        string "MTU"
+                        variant                            uint16 1500
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv4"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "IPv4.Configuration"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "dhcp"
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv6"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "IPv6.Configuration"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "auto"
+                     )
+                     dict entry(
+                        string "Privacy"
+                        variant                            string "prefered"
+                     )
+                  ]
+            )
+            dict entry(
+               string "Nameservers"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Nameservers.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Timeservers"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Timeservers.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Domains"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Domains.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Proxy"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Proxy.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Provider"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Age"
+               variant                   boolean false
+            )
+         ]
+      }
+      struct {
+         object path "/net/connman/service/wifi_18b4307d829a_hidden_managed_psk"
+         array [
+            dict entry(
+               string "Type"
+               variant                   string "wifi"
+            )
+            dict entry(
+               string "Security"
+               variant                   array [
+                     string "psk"
+                  ]
+            )
+            dict entry(
+               string "State"
+               variant                   string "idle"
+            )
+            dict entry(
+               string "Strength"
+               variant                   byte 60
+            )
+            dict entry(
+               string "Favorite"
+               variant                   boolean false
+            )
+            dict entry(
+               string "Immutable"
+               variant                   boolean false
+            )
+            dict entry(
+               string "AutoConnect"
+               variant                   boolean false
+            )
+            dict entry(
+               string "Ethernet"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "auto"
+                     )
+                     dict entry(
+                        string "Interface"
+                        variant                            string "wlan0"
+                     )
+                     dict entry(
+                        string "Address"
+                        variant                            string "18:B4:30:7D:82:9A"
+                     )
+                     dict entry(
+                        string "MTU"
+                        variant                            uint16 1500
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv4"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "IPv4.Configuration"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "dhcp"
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv6"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "IPv6.Configuration"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "auto"
+                     )
+                     dict entry(
+                        string "Privacy"
+                        variant                            string "prefered"
+                     )
+                  ]
+            )
+            dict entry(
+               string "Nameservers"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Nameservers.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Timeservers"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Timeservers.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Domains"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Domains.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Proxy"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Proxy.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Provider"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Age"
+               variant                   boolean false
+            )
+         ]
+      }
+      struct {
+         object path "/net/connman/service/wifi_18b4307d829a_4e65696768626f7572_managed_psk"
+         array [
+            dict entry(
+               string "Type"
+               variant                   string "wifi"
+            )
+            dict entry(
+               string "Security"
+               variant                   array [
+                     string "psk"
+                  ]
+            )
+            dict entry(
+               string "State"
+               variant                   string "idle"
+            )
+            dict entry(
+               string "Strength"
+               variant                   byte 42
+            )
+            dict entry(
+               string "Favorite"
+               variant                   boolean false
+            )
+            dict entry(
+               string "Immutable"
+               variant                   boolean false
+            )
+            dict entry(
+               string "AutoConnect"
+               variant                   boolean false
+            )
+            dict entry(
+               string "Name"
+               variant                   string "Neighbour"
+            )
+            dict entry(
+               string "Ethernet"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "auto"
+                     )
+                     dict entry(
+                        string "Interface"
+                        variant                            string "wlan0"
+                     )
+                     dict entry(
+                        string "Address"
+                        variant                            string "18:B4:30:7D:82:9A"
+                     )
+                     dict entry(
+                        string "MTU"
+                        variant                            uint16 1500
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv4"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "IPv4.Configuration"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "dhcp"
+                     )
+                  ]
+            )
+            dict entry(
+               string "IPv6"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "IPv6.Configuration"
+               variant                   array [
+                     dict entry(
+                        string "Method"
+                        variant                            string "auto"
+                     )
+                     dict entry(
+                        string "Privacy"
+                        variant                            string "prefered"
+                     )
+                  ]
+            )
+            dict entry(
+               string "Nameservers"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Nameservers.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Timeservers"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Timeservers.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Domains"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Domains.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Proxy"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Proxy.Configuration"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Provider"
+               variant                   array [
+                  ]
+            )
+            dict entry(
+               string "Age"
+               variant                   boolean false
+            )
+         ]
+      }
+   ]

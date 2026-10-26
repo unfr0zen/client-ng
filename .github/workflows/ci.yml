@@ -1,0 +1,35 @@
+# Lints and tests client-ng on every push to main and every pull request,
+# on Linux as the unit builds it. Warnings fail the build.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: -D warnings
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: Clippy
+        run: cargo clippy --locked --release --all-targets
+      - name: Tests
+        run: cargo test --locked --release
+      # Every skin's Lua against each screen, and the menus.
+      - name: Skins
+        run: cargo run --locked --release -- --check --skins skins --menus config/menus.lua
+      - name: Tools
+        run: python3 -m py_compile tools/*.py

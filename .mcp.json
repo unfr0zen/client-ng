@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "client-ng-desktop": {
+      "command": "python3",
+      "args": ["tools/desktop-mcp.py"]
+    }
+  }
+}

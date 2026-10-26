@@ -1,0 +1,7 @@
+# client-ng in place of nlclient (unfr0zen --client-ng): monit's nlclient
+# check, which stock's start-up (/etc/init.d/nestlabs start) asks for, runs
+# the client. Stock's own file is kept in /etc/unfr0zen/nlclient.monitrc.original.
+check process nlclient matching /nestlabs/sbin/client-ng
+  start program = "/etc/init.d/client-ng start" with timeout 20 seconds
+  stop program = "/etc/init.d/client-ng stop"
+  if 5 restarts within 100 cycles then unmonitor

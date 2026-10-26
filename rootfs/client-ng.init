@@ -1,0 +1,40 @@
+#!/bin/sh
+# Starts and stops client-ng, the thermostat's UI in place of stock
+# nlclient (unfr0zen --client-ng), for monit's nlclient check. Its skins, menus
+# and plugins are in /nestlabs/share/client-ng; its settings are kept
+# in /media/data/client-ng (moved there from /media/data/unfr0zen-client,
+# the client's earlier name, if that is all there is); its log is
+# /tmp/client-ng.log, new at each start.
+CLIENT=/nestlabs/sbin/client-ng
+SHARE=/nestlabs/share/client-ng
+DATA=/media/data/client-ng
+OLD_DATA=/media/data/unfr0zen-client
+PIDFILE=/var/run/client-ng.pid
+LOG=/tmp/client-ng.log
+
+case "$1" in
+start)
+    [ -d "$OLD_DATA" ] && [ ! -e "$DATA" ] && mv "$OLD_DATA" "$DATA"
+    mkdir -p "$DATA"
+    cd "$DATA" || exit 1
+    setsid "$CLIENT" --skins "$SHARE/skins" --menus "$SHARE/config/menus.lua" --settings "$DATA/settings.json" \
+        > "$LOG" 2>&1 < /dev/null &
+    echo $! > "$PIDFILE"
+    ;;
+stop)
+    pid=$(cat "$PIDFILE" 2> /dev/null)
+    if [ -n "$pid" ]; then
+        kill "$pid" 2> /dev/null
+        for i in 1 2 3 4 5 6 7 8 9 10; do
+            kill -0 "$pid" 2> /dev/null || break
+            sleep 1
+        done
+        kill -9 "$pid" 2> /dev/null
+    fi
+    rm -f "$PIDFILE"
+    ;;
+*)
+    echo "usage: $0 start|stop" >&2
+    exit 1
+    ;;
+esac
