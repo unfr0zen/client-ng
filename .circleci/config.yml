@@ -1,0 +1,61 @@
+version: 2.1
+
+# Lints and tests client-ng on every pull request and push to main, on Linux
+# as the unit builds it. Warnings fail the build.
+
+jobs:
+  test:
+    docker:
+      - image: rust:1-trixie
+    resource_class: arm.large.gen2
+    environment:
+      CARGO_TERM_COLOR: always
+      RUSTFLAGS: -D warnings
+      # The container reports the host's cores; the class has four.
+      CARGO_BUILD_JOBS: "4"
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - cargo-registry-v1-{{ checksum "Cargo.lock" }}
+      - run:
+          name: Clippy
+          no_output_timeout: 30m
+          command: |
+            rustup component add clippy
+            cargo clippy --locked --release --all-targets
+      # nextest for its JUnit report (.config/nextest.toml), which goes to
+      # CircleCI whether the tests pass or not.
+      - run:
+          name: Tests
+          no_output_timeout: 30m
+          command: |
+            case $(uname -m) in
+              x86_64)  sha=1d4ce302b820c41f4b89c5fb9bce45f0f0c94882c1cf08fc360caf08be6e7df4 ;;
+              aarch64) sha=3e35e8f6913af92558ba09d7155f74e35dd1f0024ef3cd891637433ae4eacbdd ;;
+            esac
+            curl -fsSL -o /tmp/nextest.tar.gz "https://github.com/nextest-rs/nextest/releases/download/cargo-nextest-0.9.151/cargo-nextest-0.9.151-$(uname -m)-unknown-linux-gnu.tar.gz"
+            echo "$sha  /tmp/nextest.tar.gz" | sha256sum -c
+            tar xzf /tmp/nextest.tar.gz -C /usr/local/bin cargo-nextest
+            status=0
+            cargo nextest run --locked --release --profile ci || status=$?
+            mkdir -p .work/test-results/rust && cp target/nextest/ci/junit.xml .work/test-results/rust/
+            exit $status
+      - save_cache:
+          key: cargo-registry-v1-{{ checksum "Cargo.lock" }}
+          paths:
+            - /usr/local/cargo/registry
+      # Every skin's Lua against each screen, and the menus.
+      - run:
+          name: Skins
+          command: cargo run --locked --release -- --check --skins skins --menus config/menus.lua
+      - run:
+          name: Tools
+          command: python3 -m py_compile tools/*.py
+      - store_test_results:
+          path: .work/test-results
+
+workflows:
+  ci:
+    jobs:
+      - test

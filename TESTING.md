@@ -10,7 +10,7 @@ cargo run -p client-ng -- --check --skins client-ng/skins --menus client-ng/conf
 ```
 
 - `--check` runs every skin's Lua on each screen with no display, so it catches Lua errors.
-- `src/platform/` is Linux-only: run its tests in the build image. CI (`.github/workflows/ci.yml`, on pushes to main and on PRs) runs clippy, the tests and `--check` on Linux, with warnings as errors.
+- `src/platform/` is Linux-only: run its tests in the build image. CI (`.circleci/config.yml`, on pushes to main and on PRs) runs clippy, the tests and `--check` on Linux, with warnings as errors.
 
 ```sh
 docker run --rm -v "$PWD:$PWD" -w "$PWD" -e CARGO_HOME="$PWD/.work/cargo" \
